@@ -1,0 +1,33 @@
+.root{
+/*    -fx-background-image: url(image/rupee.png);
+    -fx-background-color: 
+        linear-gradient(#f2f2f2, #d6d6d6),
+        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+        linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-insets: 0,1,2;*/
+   -fx-background-color: null;
+}
+
+.button{
+    -fx-background-color: 
+        linear-gradient(#f2f2f2, #d6d6d6),
+        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+        linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-insets: 0,1,2;
+}
+
+.button:focused{
+    -fx-border-color: skyblue;
+    -fx-border-redius:7;
+    -fx-background-color: #d6d6d6;
+}
+
+.date-picker{
+    -fx-font: 15px Century;
+    -fx-background-radius: 7;
+}
+
+.combo-box{
+    -fx-font: 15px Century;
+    -fx-background-radius: 7;
+}

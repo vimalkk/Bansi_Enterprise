@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1429.0" stylesheets="@main_style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bansi_enterprise.MainController">
+   <children>
+      <GridPane layoutX="328.0" layoutY="42.0" prefHeight="820.0" prefWidth="1429.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton onMouseClicked="#SalesForm" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/sales.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Sales Form" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#SalesList" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/SalesList.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Sales List" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#CustomerForm" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/Customer.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Customer Form" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#CustomerList" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/CustomerList.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Customer List" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#PurchaseForm" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/purchase.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Purchase Form" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#PurchaseList" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/PurchaseList.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Purchase List" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#VendorForm" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/Vendor.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Vendor Form" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#VendorList" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/VendorList.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Vendor List" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#ProductForm" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/Productpng.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Product Form" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#ProductList" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/ProdList.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Product List" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <JFXButton onMouseClicked="#Logout" prefHeight="170.0" prefWidth="170.0" text=" " GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <graphic>
+                  <GridPane prefHeight="173.0" prefWidth="157.0" stylesheets="@main_style.css">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="76.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="117.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <image>
+                              <Image url="@image/logout.png" />
+                           </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Logout" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

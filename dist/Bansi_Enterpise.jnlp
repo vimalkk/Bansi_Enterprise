@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Bansi_Enterpise.jnlp">
+  <information>
+    <title>Bansi_Enterpise</title>
+    <vendor>PATEL</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Bansi_Enterpise.jar" size="745580" download="eager" />
+    <jar href="lib/h2-1.3.176.jar" size="1659880" download="eager" />
+    <jar href="lib/jfoenix.jar" size="2206016" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Bansi_Enterpise" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="bansi_enterprise.Bansi_Enterprise"  name="Bansi_Enterpise" />
+  <update check="always"/>
+</jnlp>

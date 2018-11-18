@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="845.0" prefWidth="1291.0" stylesheets="@main_style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bansi_enterprise.Sales_ListController">
+   <children>
+      <Text layoutX="199.0" layoutY="863.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="118.8984375" AnchorPane.bottomAnchor="5.5390625" AnchorPane.leftAnchor="199.0">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblUserName" layoutX="1138.0" layoutY="834.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Default" wrappingWidth="138.4140510559082" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="14.585948944091797">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="868.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Selected Column :" wrappingWidth="184.99997997283936" AnchorPane.bottomAnchor="5.5390625" AnchorPane.leftAnchor="13.999979972839355">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="715.0" layoutY="861.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current User :" AnchorPane.bottomAnchor="6.765625" AnchorPane.rightAnchor="164.5859375">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <GridPane alignment="CENTER" layoutX="10.0" layoutY="55.0" prefHeight="167.0" prefWidth="1272.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="9.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="559.0" minWidth="10.0" prefWidth="135.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="559.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="559.0" minWidth="10.0" prefWidth="257.0" />
+            <ColumnConstraints hgrow="NEVER" maxWidth="559.0" minWidth="10.0" prefWidth="34.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+         </rowConstraints>
+         <children>
+            <Text fx:id="lblSalesListCategory" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By " wrappingWidth="97.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblSalesListFrom" strokeType="OUTSIDE" strokeWidth="0.0" text="From " visible="false" wrappingWidth="61.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblSalesListTo" strokeType="OUTSIDE" strokeWidth="0.0" text="To " visible="false" wrappingWidth="41.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblSalesListCategory" strokeType="OUTSIDE" strokeWidth="0.0" text="Category " textAlignment="RIGHT" visible="false" wrappingWidth="259.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="lblSalesListStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Status " wrappingWidth="65.763671875" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </Text>
+            <JFXComboBox fx:id="cmbSalesListCategory" onAction="#ComboBoxCategory" prefHeight="31.0" prefWidth="265.0" promptText="Select Category" styleClass="promt-text" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXDatePicker fx:id="dtSalesListDatePickerFrom" defaultColor="#0d1c1ab8" prefHeight="31.0" prefWidth="264.0" promptText="Select Date" visible="false" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXDatePicker fx:id="dtSalesListDatePickerTo" defaultColor="#0d1c1ab8" prefHeight="31.0" prefWidth="264.0" promptText="Select Date" visible="false" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXTextField fx:id="txtSalesListCategory" maxWidth="263.0" minWidth="139.0" prefHeight="31.0" prefWidth="139.0" visible="false" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXComboBox fx:id="cmbSalesListStatus" prefHeight="31.0" prefWidth="263.0" promptText="Select Status" styleClass="promt-text" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXButton fx:id="btnSalesListSearch" buttonType="RAISED" prefHeight="31.0" prefWidth="140.0" ripplerFill="#00000088" text="Search" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+               <font>
+                  <Font name="Century" size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="SalesOrderListAero" fitHeight="34.0" fitWidth="37.0" nodeOrientation="RIGHT_TO_LEFT" onMouseClicked="#SalesForm" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+               <image>
+                  <Image url="@image/aero.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </GridPane>
+      <HBox prefHeight="38.0" prefWidth="1291.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="navigation1" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="MAIN" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="55.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <ImageView fx:id="navigationImage1" fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@image/navigation.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="navigation2" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="SALES FORM" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="106.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <ImageView fx:id="navigationImage2" fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@image/navigation.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="navigation3" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="SALES LIST" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="107.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+         </children>
+      </HBox>
+      <JFXTreeTableView layoutX="3.0" layoutY="229.0" prefHeight="295.0" prefWidth="1285.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="229.0">
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </JFXTreeTableView>
+   </children>
+</AnchorPane>

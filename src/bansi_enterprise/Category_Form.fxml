@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bansi_enterprise.Category_FormController">
+    <stylesheets>
+        <URL value="@main_style.css" />
+    </stylesheets>
+   <children>
+      <GridPane layoutX="6.0" layoutY="355.0" prefHeight="65.0" prefWidth="494.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="6.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0" prefWidth="197.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="204.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="187.0" minWidth="10.0" prefWidth="97.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="31.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="36.0" minHeight="26.0" prefHeight="34.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fx:id="lblCategoryDescription" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" textAlignment="RIGHT" wrappingWidth="64.16796875" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <Text fx:id="lblCategoryName" strokeType="OUTSIDE" strokeWidth="0.0" text="Name " textAlignment="RIGHT" wrappingWidth="45.98046875" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXTextField fx:id="txtCategoryName" maxWidth="148.0" minWidth="148.0" prefHeight="31.0" prefWidth="148.0" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXTextField fx:id="txtCategoryDescription" maxWidth="138.0" minWidth="138.0" prefHeight="31.0" prefWidth="138.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXButton fx:id="btnCategoryAdd" onMouseClicked="#AddCategory" prefHeight="27.0" prefWidth="75.0" text="Add" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <JFXComboBox fx:id="cmbSelect" onAction="#ComboData" onMouseClicked="#combo" onMouseReleased="#comboClear" prefHeight="29.0" prefWidth="107.0" promptText="Select" visible="false" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+            <JFXRadioButton fx:id="rdUpdate" onMouseClicked="#Radio" prefHeight="19.0" prefWidth="99.0" text="Update" GridPane.halignment="RIGHT">
+               <toggleGroup>
+                  <ToggleGroup fx:id="change" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="rdNew" onMouseClicked="#Radio" selected="true" text="New" toggleGroup="$change" GridPane.halignment="LEFT" />
+            <JFXRadioButton fx:id="rdDelete" onMouseClicked="#Radio" prefHeight="19.0" prefWidth="70.0" text="Delete" toggleGroup="$change" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin></JFXRadioButton>
+         </children>
+      </GridPane>
+      <HBox layoutX="3.0" layoutY="-1.0" prefHeight="31.0" prefWidth="494.0">
+         <children>
+            <Text fx:id="navigation1" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="MAIN" textOrigin="CENTER" wrappingWidth="47.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <ImageView fx:id="navigationImage1" fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@image/navigation.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="navigation2" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="PRODUCT FORM" textOrigin="CENTER" wrappingWidth="132.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <ImageView fx:id="navigationImage2" fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@image/navigation.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="navigation3" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="ADD CATEGORY DETAIL" textOrigin="CENTER" wrappingWidth="196.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+         </children>
+      </HBox>
+      <JFXTreeTableView fx:id="tblCategoryHistory" layoutX="3.0" layoutY="37.0" prefHeight="281.0" prefWidth="494.0" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="37.0">
+         <columnResizePolicy>
+            <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy></JFXTreeTableView>
+   </children>
+</AnchorPane>

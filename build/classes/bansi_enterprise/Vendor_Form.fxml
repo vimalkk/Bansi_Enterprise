@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPaneVendorOrderForm" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="882.0" prefWidth="1291.0" stylesheets="@main_style.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bansi_enterprise.Vendor_FormController">
+   <children>
+      <Text fx:id="lblVendorCurrentUser" layoutX="1050.0" layoutY="876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current User :" AnchorPane.bottomAnchor="4.5390625" AnchorPane.rightAnchor="153.5859375">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblUserName" layoutX="1167.0" layoutY="876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Default" wrappingWidth="138.4140510559082" AnchorPane.bottomAnchor="4.5390625" AnchorPane.rightAnchor="6.585948944091797">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblVendorColumnNumber" layoutX="188.0" layoutY="876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="118.8984375" AnchorPane.bottomAnchor="4.5390625" AnchorPane.leftAnchor="188.0">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="lblVendorSelectedColumn" layoutX="8.0" layoutY="876.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Selected Column :" wrappingWidth="184.99997997283936" AnchorPane.bottomAnchor="4.5390625" AnchorPane.leftAnchor="8.0">
+         <font>
+            <Font name="Century" size="16.0" />
+         </font>
+      </Text>
+      <GridPane gridLinesVisible="true" layoutY="43.0" prefHeight="813.0" prefWidth="1291.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="505.0" minWidth="10.0" prefWidth="505.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1083.0" minWidth="10.0" prefWidth="693.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="8.0" layoutY="7.0" prefHeight="163.0" prefWidth="490.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="7.0">
+                     <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="108.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="559.0" minWidth="10.0" prefWidth="143.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="559.0" minWidth="10.0" prefWidth="61.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="559.0" minWidth="10.0" prefWidth="139.0" />
+                        <ColumnConstraints hgrow="NEVER" maxWidth="559.0" minWidth="10.0" prefWidth="39.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="ALWAYS" />
+                     </rowConstraints>
+                     <children>
+                        <Text fx:id="lblVendorSearchBy" strokeType="OUTSIDE" strokeWidth="0.0" text="Search By " wrappingWidth="85.763671875" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblVendorFrom" strokeType="OUTSIDE" strokeWidth="0.0" text="From " visible="false" wrappingWidth="52.763671875" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblVendorStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Status " wrappingWidth="58.763671875" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblVendorTo" strokeType="OUTSIDE" strokeWidth="0.0" text="To " visible="false" wrappingWidth="35.763671875" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblVendorCategory" strokeType="OUTSIDE" strokeWidth="0.0" text="Category " textAlignment="RIGHT" visible="false" wrappingWidth="109.763671875" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <JFXComboBox fx:id="cmbVendorCategory" onAction="#ComboBoxCategory" prefHeight="31.0" prefWidth="139.0" promptText="Select Category" styleClass="promt-text" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                        
+            
+                        <JFXDatePicker fx:id="dtVendorDatePickerFrom" defaultColor="#0d1c1ab8" prefHeight="31.0" prefWidth="264.0" promptText="Select Date" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXDatePicker fx:id="dtVendorDatePickerTo" defaultColor="#0d1c1ab8" prefHeight="31.0" prefWidth="264.0" promptText="Select Date" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <JFXTextField fx:id="txtVendorCategory" maxWidth="263.0" minWidth="139.0" prefHeight="31.0" prefWidth="139.0" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <JFXComboBox fx:id="cmbVendorStatus" prefHeight="31.0" prefWidth="257.0" promptText="Select Status" styleClass="promt-text" GridPane.columnIndex="3" />
+                        <JFXButton fx:id="btnVendorSearch" onMouseClicked="#tableview" prefHeight="31.0" prefWidth="140.0" ripplerFill="TRANSPARENT" text="Search" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <ImageView fitHeight="36.0" fitWidth="36.0" onMouseClicked="#VendorList" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <image>
+                              <Image url="@image/aero.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <JFXTreeTableView fx:id="tblVendorFormList" layoutX="4.0" layoutY="184.0" prefHeight="626.0" prefWidth="497.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="184.0">
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </JFXTreeTableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="852.0" prefWidth="778.0" GridPane.columnIndex="1">
+               <children>
+                  <GridPane layoutX="7.0" layoutY="14.0" prefHeight="30.0" prefWidth="773.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="6.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnVendorNew" prefHeight="30.0" prefWidth="156.0" ripplerFill="TRANSPARENT" text="New" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnVendorSave" onMouseClicked="#Insert" prefHeight="30.0" prefWidth="167.0" ripplerFill="TRANSPARENT" text="Save" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnVendorUpdate" prefHeight="30.0" prefWidth="153.0" ripplerFill="TRANSPARENT" text="Update" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnVendorPrint" prefHeight="30.0" prefWidth="155.0" ripplerFill="TRANSPARENT" text="Print" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="64.0" layoutY="44.0" prefHeight="114.0" prefWidth="313.0" AnchorPane.leftAnchor="64.0" AnchorPane.topAnchor="44.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text fx:id="lblVendorName" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendor Name  " wrappingWidth="132.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblVendorCity" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendor  City" wrappingWidth="123.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="txtVendorName" promptText="Enter Vendor Name" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                        <JFXTextField fx:id="txtVendorCity" promptText="Enter Vendor City" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="419.0" layoutY="44.0" prefHeight="114.0" prefWidth="304.0" AnchorPane.rightAnchor="63.0" AnchorPane.topAnchor="44.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Text fx:id="lblVendorContactNo" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Number  " wrappingWidth="133.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="lblVendorBalance" strokeType="OUTSIDE" strokeWidth="0.0" text="Vendor Balnace " wrappingWidth="145.763671875" GridPane.halignment="RIGHT" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES">
+                           <font>
+                              <Font name="Century" size="16.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="txtVendorContactNo" promptText="Enter Contact  No" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.hgrow="SOMETIMES" GridPane.valignment="CENTER" GridPane.vgrow="SOMETIMES" />
+                        <JFXTextField fx:id="txtVendorBalance" promptText="0" text="0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+                     </children>
+                  </GridPane>
+                  <JFXTreeTableView fx:id="tblVendorFormHistory" layoutX="5.0" layoutY="184.0" prefHeight="626.0" prefWidth="777.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="184.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <HBox prefHeight="38.0" prefWidth="1291.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="navigation1" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="MAIN" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="64.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+            <ImageView fx:id="navigationImage2" fitHeight="22.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="SOMETIMES">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@image/navigation.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="navigation3" boundsType="LOGICAL_VERTICAL_CENTER" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="VENDOR FORM" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="128.0" HBox.hgrow="SOMETIMES">
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
